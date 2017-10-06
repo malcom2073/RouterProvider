@@ -10,13 +10,19 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = QRouterCoreProvider
 TEMPLATE = app
-
+include (../QRouterLib/qrouterlib.pri)
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    cbor.cpp
+    cbor.cpp \
+    gpssimprovider.cpp \
+    obdsimprovider.cpp
 
 HEADERS  += mainwindow.h \
-    cbor.h
+    cbor.h \
+    gpssimprovider.h \
+    obdsimprovider.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    gpssimprovider.ui \
+    obdsimprovider.ui
